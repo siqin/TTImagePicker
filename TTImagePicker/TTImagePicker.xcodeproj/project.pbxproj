@@ -1,0 +1,368 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		96056AD31643C74500BDB921 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96056AD21643C74500BDB921 /* UIKit.framework */; };
+		96056AD51643C74500BDB921 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96056AD41643C74500BDB921 /* Foundation.framework */; };
+		96056AD71643C74500BDB921 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96056AD61643C74500BDB921 /* CoreGraphics.framework */; };
+		96056ADD1643C74500BDB921 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 96056ADB1643C74500BDB921 /* InfoPlist.strings */; };
+		96056ADF1643C74500BDB921 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 96056ADE1643C74500BDB921 /* main.m */; };
+		96056AE31643C74500BDB921 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 96056AE21643C74500BDB921 /* AppDelegate.m */; };
+		96056AE51643C74500BDB921 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 96056AE41643C74500BDB921 /* Default.png */; };
+		96056AE71643C74500BDB921 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96056AE61643C74500BDB921 /* Default@2x.png */; };
+		96056AE91643C74500BDB921 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96056AE81643C74500BDB921 /* Default-568h@2x.png */; };
+		96056AEC1643C74500BDB921 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96056AEB1643C74500BDB921 /* ViewController.m */; };
+		96056AEF1643C74500BDB921 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96056AED1643C74500BDB921 /* ViewController.xib */; };
+		96056B191643C82F00BDB921 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96056B181643C82F00BDB921 /* AssetsLibrary.framework */; };
+		96056B2D1643C85000BDB921 /* TTAlbumTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96056B1C1643C85000BDB921 /* TTAlbumTableController.m */; };
+		96056B2E1643C85000BDB921 /* TTAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = 96056B1E1643C85000BDB921 /* TTAsset.m */; };
+		96056B2F1643C85000BDB921 /* TTImagePickerBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 96056B201643C85000BDB921 /* TTImagePickerBar.m */; };
+		96056B301643C85000BDB921 /* TTImagePickerBar_DeleteBtnBg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96056B211643C85000BDB921 /* TTImagePickerBar_DeleteBtnBg@2x.png */; };
+		96056B311643C85000BDB921 /* TTImagePickerBar_RoundCornerMask@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96056B221643C85000BDB921 /* TTImagePickerBar_RoundCornerMask@2x.png */; };
+		96056B321643C85000BDB921 /* TTImagePickerBarBg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96056B231643C85000BDB921 /* TTImagePickerBarBg@2x.png */; };
+		96056B331643C85000BDB921 /* TTImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96056B251643C85000BDB921 /* TTImagePickerController.m */; };
+		96056B341643C85000BDB921 /* TTImagePickerItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 96056B271643C85000BDB921 /* TTImagePickerItem.m */; };
+		96056B351643C85000BDB921 /* TTImageTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96056B291643C85000BDB921 /* TTImageTableCell.m */; };
+		96056B361643C85000BDB921 /* TTImageTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96056B2B1643C85000BDB921 /* TTImageTableController.m */; };
+		96056B371643C85000BDB921 /* TTThumbnailCheckMask@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96056B2C1643C85000BDB921 /* TTThumbnailCheckMask@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		96056ACE1643C74500BDB921 /* TTImagePicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TTImagePicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		96056AD21643C74500BDB921 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		96056AD41643C74500BDB921 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		96056AD61643C74500BDB921 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		96056ADA1643C74500BDB921 /* TTImagePicker-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TTImagePicker-Info.plist"; sourceTree = "<group>"; };
+		96056ADC1643C74500BDB921 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		96056ADE1643C74500BDB921 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		96056AE01643C74500BDB921 /* TTImagePicker-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TTImagePicker-Prefix.pch"; sourceTree = "<group>"; };
+		96056AE11643C74500BDB921 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		96056AE21643C74500BDB921 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		96056AE41643C74500BDB921 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		96056AE61643C74500BDB921 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		96056AE81643C74500BDB921 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		96056AEA1643C74500BDB921 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		96056AEB1643C74500BDB921 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		96056AEE1643C74500BDB921 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		96056B181643C82F00BDB921 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		96056B1B1643C85000BDB921 /* TTAlbumTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTAlbumTableController.h; sourceTree = "<group>"; };
+		96056B1C1643C85000BDB921 /* TTAlbumTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTAlbumTableController.m; sourceTree = "<group>"; };
+		96056B1D1643C85000BDB921 /* TTAsset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTAsset.h; sourceTree = "<group>"; };
+		96056B1E1643C85000BDB921 /* TTAsset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTAsset.m; sourceTree = "<group>"; };
+		96056B1F1643C85000BDB921 /* TTImagePickerBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTImagePickerBar.h; sourceTree = "<group>"; };
+		96056B201643C85000BDB921 /* TTImagePickerBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTImagePickerBar.m; sourceTree = "<group>"; };
+		96056B211643C85000BDB921 /* TTImagePickerBar_DeleteBtnBg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TTImagePickerBar_DeleteBtnBg@2x.png"; sourceTree = "<group>"; };
+		96056B221643C85000BDB921 /* TTImagePickerBar_RoundCornerMask@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TTImagePickerBar_RoundCornerMask@2x.png"; sourceTree = "<group>"; };
+		96056B231643C85000BDB921 /* TTImagePickerBarBg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TTImagePickerBarBg@2x.png"; sourceTree = "<group>"; };
+		96056B241643C85000BDB921 /* TTImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTImagePickerController.h; sourceTree = "<group>"; };
+		96056B251643C85000BDB921 /* TTImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTImagePickerController.m; sourceTree = "<group>"; };
+		96056B261643C85000BDB921 /* TTImagePickerItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTImagePickerItem.h; sourceTree = "<group>"; };
+		96056B271643C85000BDB921 /* TTImagePickerItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTImagePickerItem.m; sourceTree = "<group>"; };
+		96056B281643C85000BDB921 /* TTImageTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTImageTableCell.h; sourceTree = "<group>"; };
+		96056B291643C85000BDB921 /* TTImageTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTImageTableCell.m; sourceTree = "<group>"; };
+		96056B2A1643C85000BDB921 /* TTImageTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTImageTableController.h; sourceTree = "<group>"; };
+		96056B2B1643C85000BDB921 /* TTImageTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTImageTableController.m; sourceTree = "<group>"; };
+		96056B2C1643C85000BDB921 /* TTThumbnailCheckMask@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TTThumbnailCheckMask@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		96056ACB1643C74500BDB921 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96056B191643C82F00BDB921 /* AssetsLibrary.framework in Frameworks */,
+				96056AD31643C74500BDB921 /* UIKit.framework in Frameworks */,
+				96056AD51643C74500BDB921 /* Foundation.framework in Frameworks */,
+				96056AD71643C74500BDB921 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		96056AC31643C74500BDB921 = {
+			isa = PBXGroup;
+			children = (
+				96056B1A1643C85000BDB921 /* TTImagePickerController */,
+				96056AD81643C74500BDB921 /* TTImagePicker */,
+				96056AD11643C74500BDB921 /* Frameworks */,
+				96056ACF1643C74500BDB921 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		96056ACF1643C74500BDB921 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				96056ACE1643C74500BDB921 /* TTImagePicker.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		96056AD11643C74500BDB921 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				96056B181643C82F00BDB921 /* AssetsLibrary.framework */,
+				96056AD21643C74500BDB921 /* UIKit.framework */,
+				96056AD41643C74500BDB921 /* Foundation.framework */,
+				96056AD61643C74500BDB921 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		96056AD81643C74500BDB921 /* TTImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				96056AE11643C74500BDB921 /* AppDelegate.h */,
+				96056AE21643C74500BDB921 /* AppDelegate.m */,
+				96056AEA1643C74500BDB921 /* ViewController.h */,
+				96056AEB1643C74500BDB921 /* ViewController.m */,
+				96056AED1643C74500BDB921 /* ViewController.xib */,
+				96056AD91643C74500BDB921 /* Supporting Files */,
+			);
+			path = TTImagePicker;
+			sourceTree = "<group>";
+		};
+		96056AD91643C74500BDB921 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				96056ADA1643C74500BDB921 /* TTImagePicker-Info.plist */,
+				96056ADB1643C74500BDB921 /* InfoPlist.strings */,
+				96056ADE1643C74500BDB921 /* main.m */,
+				96056AE01643C74500BDB921 /* TTImagePicker-Prefix.pch */,
+				96056AE41643C74500BDB921 /* Default.png */,
+				96056AE61643C74500BDB921 /* Default@2x.png */,
+				96056AE81643C74500BDB921 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		96056B1A1643C85000BDB921 /* TTImagePickerController */ = {
+			isa = PBXGroup;
+			children = (
+				96056B1B1643C85000BDB921 /* TTAlbumTableController.h */,
+				96056B1C1643C85000BDB921 /* TTAlbumTableController.m */,
+				96056B1D1643C85000BDB921 /* TTAsset.h */,
+				96056B1E1643C85000BDB921 /* TTAsset.m */,
+				96056B1F1643C85000BDB921 /* TTImagePickerBar.h */,
+				96056B201643C85000BDB921 /* TTImagePickerBar.m */,
+				96056B211643C85000BDB921 /* TTImagePickerBar_DeleteBtnBg@2x.png */,
+				96056B221643C85000BDB921 /* TTImagePickerBar_RoundCornerMask@2x.png */,
+				96056B231643C85000BDB921 /* TTImagePickerBarBg@2x.png */,
+				96056B241643C85000BDB921 /* TTImagePickerController.h */,
+				96056B251643C85000BDB921 /* TTImagePickerController.m */,
+				96056B261643C85000BDB921 /* TTImagePickerItem.h */,
+				96056B271643C85000BDB921 /* TTImagePickerItem.m */,
+				96056B281643C85000BDB921 /* TTImageTableCell.h */,
+				96056B291643C85000BDB921 /* TTImageTableCell.m */,
+				96056B2A1643C85000BDB921 /* TTImageTableController.h */,
+				96056B2B1643C85000BDB921 /* TTImageTableController.m */,
+				96056B2C1643C85000BDB921 /* TTThumbnailCheckMask@2x.png */,
+			);
+			path = TTImagePickerController;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		96056ACD1643C74500BDB921 /* TTImagePicker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96056AF21643C74500BDB921 /* Build configuration list for PBXNativeTarget "TTImagePicker" */;
+			buildPhases = (
+				96056ACA1643C74500BDB921 /* Sources */,
+				96056ACB1643C74500BDB921 /* Frameworks */,
+				96056ACC1643C74500BDB921 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TTImagePicker;
+			productName = TTImagePicker;
+			productReference = 96056ACE1643C74500BDB921 /* TTImagePicker.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		96056AC51643C74500BDB921 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Jason Lee";
+			};
+			buildConfigurationList = 96056AC81643C74500BDB921 /* Build configuration list for PBXProject "TTImagePicker" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 96056AC31643C74500BDB921;
+			productRefGroup = 96056ACF1643C74500BDB921 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				96056ACD1643C74500BDB921 /* TTImagePicker */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		96056ACC1643C74500BDB921 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96056ADD1643C74500BDB921 /* InfoPlist.strings in Resources */,
+				96056AE51643C74500BDB921 /* Default.png in Resources */,
+				96056AE71643C74500BDB921 /* Default@2x.png in Resources */,
+				96056AE91643C74500BDB921 /* Default-568h@2x.png in Resources */,
+				96056AEF1643C74500BDB921 /* ViewController.xib in Resources */,
+				96056B301643C85000BDB921 /* TTImagePickerBar_DeleteBtnBg@2x.png in Resources */,
+				96056B311643C85000BDB921 /* TTImagePickerBar_RoundCornerMask@2x.png in Resources */,
+				96056B321643C85000BDB921 /* TTImagePickerBarBg@2x.png in Resources */,
+				96056B371643C85000BDB921 /* TTThumbnailCheckMask@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		96056ACA1643C74500BDB921 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96056ADF1643C74500BDB921 /* main.m in Sources */,
+				96056AE31643C74500BDB921 /* AppDelegate.m in Sources */,
+				96056AEC1643C74500BDB921 /* ViewController.m in Sources */,
+				96056B2D1643C85000BDB921 /* TTAlbumTableController.m in Sources */,
+				96056B2E1643C85000BDB921 /* TTAsset.m in Sources */,
+				96056B2F1643C85000BDB921 /* TTImagePickerBar.m in Sources */,
+				96056B331643C85000BDB921 /* TTImagePickerController.m in Sources */,
+				96056B341643C85000BDB921 /* TTImagePickerItem.m in Sources */,
+				96056B351643C85000BDB921 /* TTImageTableCell.m in Sources */,
+				96056B361643C85000BDB921 /* TTImageTableController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		96056ADB1643C74500BDB921 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				96056ADC1643C74500BDB921 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		96056AED1643C74500BDB921 /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				96056AEE1643C74500BDB921 /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		96056AF01643C74500BDB921 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		96056AF11643C74500BDB921 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		96056AF31643C74500BDB921 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TTImagePicker/TTImagePicker-Prefix.pch";
+				INFOPLIST_FILE = "TTImagePicker/TTImagePicker-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		96056AF41643C74500BDB921 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TTImagePicker/TTImagePicker-Prefix.pch";
+				INFOPLIST_FILE = "TTImagePicker/TTImagePicker-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		96056AC81643C74500BDB921 /* Build configuration list for PBXProject "TTImagePicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96056AF01643C74500BDB921 /* Debug */,
+				96056AF11643C74500BDB921 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		96056AF21643C74500BDB921 /* Build configuration list for PBXNativeTarget "TTImagePicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96056AF31643C74500BDB921 /* Debug */,
+				96056AF41643C74500BDB921 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 96056AC51643C74500BDB921 /* Project object */;
+}
