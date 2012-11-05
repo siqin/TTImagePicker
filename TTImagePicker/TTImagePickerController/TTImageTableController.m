@@ -32,6 +32,8 @@
 {
     [super viewDidLoad];
     
+    self.title = @"加载中";
+    
     // Translate EnGroupName into CnGroupName
     NSString *groupName = [self.assetsGroup valueForProperty:ALAssetsGroupPropertyName];
     if ([groupName isEqualToString:@"Camera Roll"]) {
@@ -39,7 +41,6 @@
     } else if ([groupName isEqualToString:@"My Photo Stream"]) {
         groupName = @"我的照片流";
     }
-    self.title = groupName;
     
     self.navigationController.navigationBar.barStyle = UIBarStyleBlackTranslucent;
     self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithTitle:@"完成" style:UIBarButtonSystemItemDone target:self action:@selector(doneButtonDidClick:)] autorelease];
@@ -53,8 +54,12 @@
     _bottomBar = [[TTImagePickerBar alloc] initWithFrame:(CGRect){0, 364, 320, 96}];
     [self.view addSubview:self.bottomBar];
     
-    dispatch_async(dispatch_get_main_queue(), ^{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         [self getImages];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.title = groupName;
+            [self.tableView reloadData];
+        });
     });
 }
 
@@ -86,8 +91,6 @@
             }
         }];
     }
-    
-    [self.tableView reloadData];
 }
 
 #pragma mark - Table view data source

@@ -144,15 +144,13 @@
 		96056B1A1643C85000BDB921 /* TTImagePickerController */ = {
 			isa = PBXGroup;
 			children = (
+				96B69AB016478DAB0059464B /* Image */,
 				96056B1B1643C85000BDB921 /* TTAlbumTableController.h */,
 				96056B1C1643C85000BDB921 /* TTAlbumTableController.m */,
 				96056B1D1643C85000BDB921 /* TTAsset.h */,
 				96056B1E1643C85000BDB921 /* TTAsset.m */,
 				96056B1F1643C85000BDB921 /* TTImagePickerBar.h */,
 				96056B201643C85000BDB921 /* TTImagePickerBar.m */,
-				96056B211643C85000BDB921 /* TTImagePickerBar_DeleteBtnBg@2x.png */,
-				96056B221643C85000BDB921 /* TTImagePickerBar_RoundCornerMask@2x.png */,
-				96056B231643C85000BDB921 /* TTImagePickerBarBg@2x.png */,
 				96056B241643C85000BDB921 /* TTImagePickerController.h */,
 				96056B251643C85000BDB921 /* TTImagePickerController.m */,
 				96056B261643C85000BDB921 /* TTImagePickerItem.h */,
@@ -161,9 +159,19 @@
 				96056B291643C85000BDB921 /* TTImageTableCell.m */,
 				96056B2A1643C85000BDB921 /* TTImageTableController.h */,
 				96056B2B1643C85000BDB921 /* TTImageTableController.m */,
-				96056B2C1643C85000BDB921 /* TTThumbnailCheckMask@2x.png */,
 			);
 			path = TTImagePickerController;
+			sourceTree = "<group>";
+		};
+		96B69AB016478DAB0059464B /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				96056B211643C85000BDB921 /* TTImagePickerBar_DeleteBtnBg@2x.png */,
+				96056B221643C85000BDB921 /* TTImagePickerBar_RoundCornerMask@2x.png */,
+				96056B231643C85000BDB921 /* TTImagePickerBarBg@2x.png */,
+				96056B2C1643C85000BDB921 /* TTThumbnailCheckMask@2x.png */,
+			);
+			name = Image;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,6 +369,7 @@
 				96056AF41643C74500BDB921 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

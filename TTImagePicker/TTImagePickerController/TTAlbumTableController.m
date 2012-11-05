@@ -69,6 +69,7 @@
             }
         } failureBlock:^(NSError *error) {
             NSLog(@"Group not found!\n");
+            self.title = @"访问照片失败"; // Photo-access is disabled.
         }];
     });
 }
