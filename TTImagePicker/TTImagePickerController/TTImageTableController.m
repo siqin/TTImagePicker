@@ -54,9 +54,11 @@
     _bottomBar = [[TTImagePickerBar alloc] initWithFrame:(CGRect){0, 364, 320, 96}];
     [self.view addSubview:self.bottomBar];
     
+    // You can show loading here...
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         [self getImages];
         dispatch_async(dispatch_get_main_queue(), ^{
+            // You can hide loading here...
             self.title = groupName;
             [self.tableView reloadData];
         });
@@ -147,25 +149,33 @@
         return ;
     }
     
-    NSMutableArray *imageInfoArray = [[[NSMutableArray alloc] init] autorelease];
-	
-	for(TTAsset *ttAsset in self.bottomBar.selectedAssets) {
-        ALAsset *asset = ttAsset.asset;
-		NSMutableDictionary *workingDictionary = [[NSMutableDictionary alloc] init];
-        
-		[workingDictionary setObject:[asset valueForProperty:ALAssetPropertyType] forKey:@"UIImagePickerControllerMediaType"];
-        [workingDictionary setObject:[UIImage imageWithCGImage:[[asset defaultRepresentation] fullScreenImage]] forKey:@"UIImagePickerControllerOriginalImage"];
-		[workingDictionary setObject:[[asset valueForProperty:ALAssetPropertyURLs] valueForKey:[[[asset valueForProperty:ALAssetPropertyURLs] allKeys] objectAtIndex:0]] forKey:@"UIImagePickerControllerReferenceURL"];
-		
-		[imageInfoArray addObject:workingDictionary];
-		[workingDictionary release], workingDictionary = nil;
-	}
+    // You can show loading here...
     
-    if (self.delegate &&
-        [self.delegate respondsToSelector:@selector(didFinishPickingImages:)])
-    {
-        [self.delegate performSelector:@selector(didFinishPickingImages:) withObject:imageInfoArray];
-    }
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSMutableArray *imageInfoArray = [[[NSMutableArray alloc] init] autorelease];
+        
+        for(TTAsset *ttAsset in self.bottomBar.selectedAssets) {
+            ALAsset *asset = ttAsset.asset;
+            NSMutableDictionary *workingDictionary = [[NSMutableDictionary alloc] init];
+            
+            [workingDictionary setObject:[asset valueForProperty:ALAssetPropertyType] forKey:@"UIImagePickerControllerMediaType"];
+            [workingDictionary setObject:[UIImage imageWithCGImage:[[asset defaultRepresentation] fullScreenImage]] forKey:@"UIImagePickerControllerOriginalImage"];
+            [workingDictionary setObject:[[asset valueForProperty:ALAssetPropertyURLs] valueForKey:[[[asset valueForProperty:ALAssetPropertyURLs] allKeys] objectAtIndex:0]] forKey:@"UIImagePickerControllerReferenceURL"];
+            
+            [imageInfoArray addObject:workingDictionary];
+            [workingDictionary release], workingDictionary = nil;
+        }
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            // You can hide loading here...
+
+            if (self.delegate &&
+                [self.delegate respondsToSelector:@selector(didFinishPickingImages:)])
+            {
+                [self.delegate performSelector:@selector(didFinishPickingImages:) withObject:imageInfoArray];
+            }
+        });
+    });
 }
 
 - (void)thumbnailDidClick:(TTAsset *)ttAsset
