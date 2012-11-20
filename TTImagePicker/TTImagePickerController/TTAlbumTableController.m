@@ -62,6 +62,7 @@
     }
     
     dispatch_async(dispatch_get_main_queue(), ^{
+        // !!! Notice : ALAssetsGroupAll doesn't include ALAssetsGroupLibrary.
         [_assetsLibrary enumerateGroupsWithTypes:ALAssetsGroupAll usingBlock:^(ALAssetsGroup *group, BOOL *stop) {
             if (group) {
                 [self.groupArray addObject:group];
