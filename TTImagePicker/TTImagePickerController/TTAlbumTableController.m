@@ -15,10 +15,22 @@
 
 @implementation TTAlbumTableController
 
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        //
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationWillEnterForeground) name:UIApplicationWillEnterForegroundNotification object:nil];
+    }
+    return self;
+}
+
 - (void)dealloc
 {
     [_groupArray release];
     [_assetsLibrary release];
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIApplicationWillEnterForegroundNotification object:nil];
     //
     [super dealloc];
 }
@@ -50,6 +62,11 @@
 }
 
 #pragma mark - 
+
+- (void)applicationWillEnterForeground
+{
+    // reload table if needed.
+}
 
 - (void)checkAlbumGroups
 {

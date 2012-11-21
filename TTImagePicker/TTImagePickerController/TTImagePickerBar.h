@@ -17,4 +17,6 @@
 - (void)addAsset:(TTAsset *)ttAsset;
 - (void)removeAsset:(TTAsset *)ttAsset;
 
+- (void)reloadData;
+
 @end

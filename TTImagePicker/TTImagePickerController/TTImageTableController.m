@@ -16,6 +16,16 @@
 
 @implementation TTImageTableController
 
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        //
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationWillEnterForeground) name:UIApplicationWillEnterForegroundNotification object:nil];
+    }
+    return self;
+}
+
 - (void)dealloc
 {
     [_assetsLibrary release];
@@ -24,6 +34,8 @@
     
     [_tableView release];
     [_bottomBar release];
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIApplicationWillEnterForegroundNotification object:nil];
     //
     [super dealloc];
 }
@@ -72,6 +84,11 @@
 }
 
 #pragma mark - 
+
+- (void)applicationWillEnterForeground
+{
+    // reload table if needed.
+}
 
 - (void)getImages
 {
@@ -154,20 +171,44 @@
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSMutableArray *imageInfoArray = [[[NSMutableArray alloc] init] autorelease];
         
-        for(TTAsset *ttAsset in self.bottomBar.selectedAssets) {
-            ALAsset *asset = ttAsset.asset;
-            NSMutableDictionary *workingDictionary = [[NSMutableDictionary alloc] init];
-            
-            [workingDictionary setObject:[asset valueForProperty:ALAssetPropertyType] forKey:@"UIImagePickerControllerMediaType"];
-            [workingDictionary setObject:[UIImage imageWithCGImage:[[asset defaultRepresentation] fullScreenImage]] forKey:@"UIImagePickerControllerOriginalImage"];
-            [workingDictionary setObject:[[asset valueForProperty:ALAssetPropertyURLs] valueForKey:[[[asset valueForProperty:ALAssetPropertyURLs] allKeys] objectAtIndex:0]] forKey:@"UIImagePickerControllerReferenceURL"];
-            
-            [imageInfoArray addObject:workingDictionary];
-            [workingDictionary release], workingDictionary = nil;
+        @autoreleasepool {
+            for (TTAsset *ttAsset in self.bottomBar.selectedAssets) {
+                ALAsset *asset = ttAsset.asset;
+                NSMutableDictionary *workingDictionary = [[[NSMutableDictionary alloc] init] autorelease];
+                
+                id propertyType = [asset valueForProperty:ALAssetPropertyType];
+                if (propertyType) {
+                    [workingDictionary setObject:propertyType forKey:@"UIImagePickerControllerMediaType"];
+                } else {
+                    continue;
+                }
+                
+                UIImage *originalImage = [UIImage imageWithCGImage:[[asset defaultRepresentation] fullResolutionImage]];
+                if (originalImage) {
+                    [workingDictionary setObject:originalImage forKey:@"UIImagePickerControllerOriginalImage"];
+                } else {
+                    continue;
+                }
+                
+                id referenceURL = [[asset valueForProperty:ALAssetPropertyURLs] valueForKey:[[[asset valueForProperty:ALAssetPropertyURLs] allKeys] objectAtIndex:0]];
+                if (referenceURL) {
+                    [workingDictionary setObject:referenceURL forKey:@"UIImagePickerControllerReferenceURL"];
+                } else {
+                    continue;
+                }
+                
+                [imageInfoArray addObject:workingDictionary];
+            }
         }
         
         dispatch_async(dispatch_get_main_queue(), ^{
             // You can hide loading here...
+            
+            if ([imageInfoArray count] <= 0) {
+                [self.bottomBar.selectedAssets removeAllObjects];
+                [self.bottomBar reloadData];
+                return ;
+            }
 
             if (self.delegate &&
                 [self.delegate respondsToSelector:@selector(didFinishPickingImages:)])
