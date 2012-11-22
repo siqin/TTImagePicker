@@ -21,4 +21,6 @@
 @property (strong, nonatomic) UITableView *tableView;
 @property (strong, nonatomic) TTImagePickerBar *bottomBar;
 
+@property (assign, nonatomic) BOOL isUploading;
+
 @end

@@ -166,6 +166,10 @@
         return ;
     }
     
+    if (self.isUploading) {
+        return ;
+    }
+    self.isUploading = YES;
     // You can show loading here...
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
@@ -215,6 +219,8 @@
             {
                 [self.delegate performSelector:@selector(didFinishPickingImages:) withObject:imageInfoArray];
             }
+            
+            self.isUploading = NO;
         });
     });
 }
